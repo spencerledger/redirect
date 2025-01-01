@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="You are leaving spencers.zone">
+    <meta property="og:description" content="You are leaving spencers.zone">
+    <meta property="og:image" content="https://cdn.spencers.zone/images/ModernLogo.png">
+    <meta property="og:url" content="https://www.spencers.zone">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="You are leaving spencers.zone">
+    <meta name="twitter:description" content="You are leaving spencers.zone">
+    <meta name="twitter:image" content="https://cdn.spencers.zone/images/ModernLogo.png">
+    <title>Goodbye!</title>
+    <link rel="icon" href="https://cdn.spencers.zone/images/SLFavicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <img src="https://cdn.spencers.zone/images/ModernLogo.png" alt="Spencer's Logo" class="logo">
+            <img src="https://cdn.spencers.zone/images/loading.gif" alt="Loading..." class="loading-gif">
+            <h1>Goodbye!</h1>
+            <p>You're leaving spencers.zone and will be redirected in <span id="timer">3</span> seconds.</p>
+            <p><a href="javascript:void(0);" class="go-back" onclick="goBack()">Make a mistake? Click here to go back.</a></p>
+        </div>
+    </div>
+
+    <script>
+        let timer = 3; // Timer set to 3 seconds
+        let timerElement = document.getElementById('timer');
+
+        // Function to update the timer and redirect
+        function countdown() {
+            if (timer > 0) {
+                timerElement.textContent = timer;
+                timer--;
+            } else {
+                window.location.href = "https://clicks.spencers.zone/vampireweekend";  // Change this to the URL you're redirecting to
+            }
+        }
+
+        // Update the countdown every second
+        setInterval(countdown, 1000);
+
+        // Function to go back to the previous page
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
