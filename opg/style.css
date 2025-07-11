@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #15b368; /* updated background */
+}
+
+.container {
+    text-align: center;
+    padding: 40px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.logo {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.loading-bar {
+    width: 100%;
+    background: #e0e0e0;
+    border-radius: 6px;
+    overflow: hidden;
+    height: 12px;
+    margin: 1rem 0 1.5rem 0;
+}
+
+.loading-bar-inner {
+    height: 100%;
+    width: 0%;
+    background: #4caf50;
+    animation: loading 3s linear forwards;
+    border-radius: 6px 0 0 6px;
+}
+
+@keyframes loading {
+    to {
+        width: 100%;
+    }
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.go-back {
+    font-size: 1rem;
+    text-decoration: none;
+    color: #15b368; /* Matches green background */
+    font-weight: 500;
+}
+
+.go-back:hover {
+    text-decoration: none; /* Removes underline on hover */
+    color: #15b368; /* Keeps colour same on hover */
+}
