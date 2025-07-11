@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:title" content="You are leaving spencers.zone" />
+    <meta property="og:description" content="You are leaving spencers.zone" />
+    <meta property="og:image" content="https://cdn.spencers.zone/images/ModernLogo.png" />
+    <meta property="og:url" content="https://www.spencers.zone" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="You are leaving spencers.zone" />
+    <meta name="twitter:description" content="You are leaving spencers.zone" />
+    <meta name="twitter:image" content="https://cdn.spencers.zone/images/ModernLogo.png" />
+    <title>Goodbye!</title>
+    <link rel="icon" href="https://cdn.spencers.zone/images/SLFavicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Minimal inline styling for loading bar */
+      .loading-bar {
+        width: 100%;
+        background: #e0e0e0;
+        border-radius: 6px;
+        overflow: hidden;
+        height: 12px;
+        margin: 1rem 0 1.5rem 0;
+      }
+      .loading-bar-inner {
+        height: 100%;
+        width: 0%;
+        background: #4caf50;
+        animation: loading 3s linear forwards;
+        border-radius: 6px 0 0 6px;
+      }
+      @keyframes loading {
+        to {
+          width: 100%;
+        }
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <img src="https://cdn.spencers.zone/images/ModernLogo.png" alt="Spencer's Logo" class="logo" />
+            <div class="loading-bar">
+              <div class="loading-bar-inner"></div>
+            </div>
+            <h1>Goodbye!</h1>
+            <p>
+              You're leaving spencers.zone and will be redirected in
+              <span id="timer">3</span> <span id="countdown-text">seconds</span>.
+            </p>
+            <p>
+              <a href="javascript:void(0);" class="go-back" onclick="closeTab()">Make a mistake? Click here to go back.</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        let timer = 3; // Timer starts at 3 seconds
+        const timerElement = document.getElementById('timer');
+        const countdownText = document.getElementById('countdown-text');
+
+        function countdown() {
+            if (timer > 0) {
+                timerElement.textContent = timer;
+                countdownText.textContent = timer === 1 ? 'second' : 'seconds';
+                timer--;
+            } else {
+                window.location.href = "https://analytics.spencers.zone/candidate";
+            }
+        }
+
+        // Run immediately so it shows "3" at page load
+        countdown();
+
+        // Then update every second
+        setInterval(countdown, 1000);
+
+        function closeTab() {
+            window.close();
+        }
+    </script>
+</body>
+</html>
