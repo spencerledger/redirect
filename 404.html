@@ -34,7 +34,10 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(4, 1fr);
-            padding: 50px;
+            padding: 40px;
+            box-sizing: border-box;
+            justify-items: center;
+            align-items: center;
         }
 
         .floating-text {
@@ -61,6 +64,21 @@
             margin: -20px 0 0 0;
             font-weight: 400;
         }
+
+        .framework-logo {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 10;
+            width: 240px;
+            height: auto;
+            opacity: 0.85;
+            transition: opacity 0.2s ease;
+        }
+
+        .framework-logo:hover {
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
@@ -75,11 +93,17 @@
         <div class="floating-text">Page Not Found</div>
         <div class="floating-text">are you lost?</div>
         <div class="floating-text">the spencers.zone framework</div>
+        <div class="floating-text">page missing</div>
+        <div class="floating-text">error 404</div>
     </div>
 
     <div class="main-container">
         <h1>HTTP 404</h1>
         <p>response</p>
     </div>
+
+    <a href="https://www.spencers.zone/framework" target="_blank" rel="noopener noreferrer">
+        <img src="https://cdn.spencers.zone/images/spencerszoneframework-whitebg.png" alt="Spencers.zone Framework" class="framework-logo">
+    </a>
 </body>
 </html>
