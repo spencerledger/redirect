@@ -25,6 +25,6 @@ User-agent: AppleBot-Extended
 Disallow: /
 
 User-agent: *
-Allow: /
+Disallow: /
 
 # End Cloudflare-managed content
